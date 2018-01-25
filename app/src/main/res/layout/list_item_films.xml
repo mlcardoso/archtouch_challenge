@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemFilmRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/activity_default_margin"
+    app:cardElevation="@dimen/cardview_default_elevation"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <br.com.apps.tmdblist.Utils.TranslateDraweeView
+            android:id="@+id/sdvFilmThumb"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="@dimen/activity_default_margin"
+            android:layout_marginRight="@dimen/activity_default_margin"
+            android:scaleType="centerInside"
+            android:transitionName="thumb" />
+
+        <TextView
+            android:id="@+id/tvTitleFilm"
+            style="@style/movie_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/sdvFilmThumb"
+            android:layout_toRightOf="@+id/sdvFilmThumb"
+            android:transitionName="name"
+            tools:text="LONG REALLY " />
+
+        <TextView
+            android:id="@+id/tvGenresFilm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitleFilm"
+            android:layout_toEndOf="@+id/sdvFilmThumb"
+            android:layout_toRightOf="@+id/sdvFilmThumb"
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/item_list_info"
+            android:transitionName="genre"
+            tools:text="sdvFilmThumb" />
+
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/rbRatingFilm"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvGenresFilm"
+            android:layout_toEndOf="@+id/sdvFilmThumb"
+            android:layout_toRightOf="@+id/sdvFilmThumb"
+            android:stepSize=".1"
+            android:transitionName="ratingBar" />
+
+        <TextView
+            android:id="@+id/tvRatio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvGenresFilm"
+            android:layout_toEndOf="@+id/rbRatingFilm"
+            android:layout_toRightOf="@+id/rbRatingFilm"
+            android:textSize="@dimen/item_list_info"
+            android:transitionName="rating"
+            tools:text="(90)" />
+
+        <ImageView
+            android:id="@+id/ivAdult"
+            android:layout_width="@dimen/adult_icon_size"
+            android:layout_height="@dimen/adult_icon_size"
+            android:layout_below="@+id/tvGenresFilm"
+            android:layout_toEndOf="@+id/tvRatio"
+            android:layout_toRightOf="@+id/tvRatio"
+            android:src="@drawable/ic_xxl"
+            android:textSize="@dimen/item_list_info"
+            android:layout_marginLeft="@dimen/activity_default_margin"
+            android:layout_marginStart="@dimen/activity_default_margin"
+            android:transitionName="adult"/>
+
+
+        <TextView
+            android:id="@+id/tvDescriptionFilm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rbRatingFilm"
+            android:layout_toEndOf="@+id/sdvFilmThumb"
+            android:layout_toRightOf="@+id/sdvFilmThumb"
+            android:ellipsize="end"
+            android:lines="5"
+            tools:text="sdvFilmThumb" />
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

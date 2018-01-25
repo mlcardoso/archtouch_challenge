@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdvBackFilm"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerInside" />
+
+        <br.com.apps.tmdblist.Utils.TranslateDraweeView
+            android:id="@+id/sdvFilmThumb"
+            android:layout_width="115dp"
+            android:layout_height="170dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="170dp"
+            android:scaleType="centerInside"
+            android:transitionName="thumb" />
+
+        <TextView
+            android:id="@+id/tvTitleFilm"
+            style="@style/movie_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sdvBackFilm"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/sdvFilmThumb"
+            android:layout_toRightOf="@+id/sdvFilmThumb"
+            android:transitionName="name"
+            tools:text="LONG REALLY " />
+
+
+        <TextView
+            android:id="@+id/tvGenresFilm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitleFilm"
+            android:layout_toEndOf="@+id/sdvFilmThumb"
+            android:layout_toRightOf="@+id/sdvFilmThumb"
+            android:textSize="@dimen/item_list_info"
+            android:transitionName="genre"
+            tools:text="sdvFilmThumb" />
+
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/rbRatingFilm"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvGenresFilm"
+            android:layout_toEndOf="@+id/sdvFilmThumb"
+            android:layout_toRightOf="@+id/sdvFilmThumb"
+            android:stepSize=".1"
+            android:transitionName="ratingBar" />
+
+        <TextView
+            android:id="@+id/tvRatio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvGenresFilm"
+            android:layout_toEndOf="@+id/rbRatingFilm"
+            android:layout_toRightOf="@+id/rbRatingFilm"
+            android:text="(90)"
+            android:textSize="12sp"
+            android:transitionName="rating" />
+
+        <ImageView
+            android:id="@+id/ivAdult"
+            android:layout_width="@dimen/adult_icon_size"
+            android:layout_height="@dimen/adult_icon_size"
+            android:layout_below="@+id/tvGenresFilm"
+            android:layout_marginLeft="@dimen/activity_default_margin"
+            android:layout_marginStart="@dimen/activity_default_margin"
+            android:layout_toEndOf="@+id/tvRatio"
+            android:layout_toRightOf="@+id/tvRatio"
+            android:src="@drawable/ic_xxl"
+            android:textSize="@dimen/item_list_info"
+            android:transitionName="adult" />
+
+        <TextView
+            android:id="@+id/tvRelease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rbRatingFilm"
+            android:layout_toEndOf="@+id/sdvFilmThumb"
+            android:layout_toRightOf="@+id/sdvFilmThumb" />
+
+        <TextView
+            android:id="@+id/tvDescriptionFilm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sdvFilmThumb"
+            android:gravity="center"
+            android:padding="10dp"
+            tools:text="DESCRIPTION" />
+
+        <LinearLayout
+            android:id="@+id/llMoreInformations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDescriptionFilm"
+            android:layout_marginEnd="@dimen/activity_default_margin"
+            android:layout_marginLeft="@dimen/activity_default_margin"
+            android:layout_marginRight="@dimen/activity_default_margin"
+            android:layout_marginStart="@dimen/activity_default_margin"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/more_information_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/budget" />
+
+                <TextView
+                    android:id="@+id/tvBudget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="sdvFilmThumb" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/more_information_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/revenue" />
+
+                <TextView
+                    android:id="@+id/tvRevenue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="sdvFilmThumb" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/more_information_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/companies" />
+
+                <TextView
+                    android:id="@+id/tvCompanies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="sdvFilmThumb" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/more_information_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/origin_country" />
+
+                <TextView
+                    android:id="@+id/tvContry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="sdvFilmThumb" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/more_information_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/languages" />
+
+                <TextView
+                    android:id="@+id/tvLanguages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="sdvFilmThumb" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

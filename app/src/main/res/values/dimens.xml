@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_default_margin">8dp</dimen>
+    <dimen name="height_film_tumb">100dp</dimen>
+    <dimen name="heightFilmThumb">100dp</dimen>
+    <dimen name="title_movie_size">16sp</dimen>
+    <dimen name="item_list_info">12sp</dimen>
+    <dimen name="min_click_space">44dp</dimen>
+    <dimen name="adult_icon_size">16dp</dimen>
+</resources>

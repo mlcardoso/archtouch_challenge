@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TMDB list</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="ratio_label">(%1$.1f)</string>
+    <string name="money_value">R$ %1$s</string>
+    <string name="show_more">Mostrar Mais</string>
+    <string name="top_rated">Melhor Rate</string>
+    <string name="no_movie_selected">Nenhum filme selecionado</string>
+    <string name="companies">Companhias:</string>
+    <string name="origin_country">Pais de Origem:</string>
+    <string name="languages">Idiomas:</string>
+    <string name="revenue">Arrecadação:</string>
+    <string name="budget">Orçamento:</string>
+</resources>
